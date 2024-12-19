@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My Bookshelf</title>
+</head>
+<body>
+    <h1>Takaya's Bookshelf</h1>
+    <div class="genres">
+        <button data-genre="all">All</button>
+        <button data-genre="mystery">Mystery</button>
+        <button data-genre="math">Mathematics</button>
+        <button data-genre="classics">Classic Literature</button>
+        <button data-genre="philosophy">Philosophy</button>
+        <button data-genre="horror">Horror</button>
+        <button data-genre="science">Science</button>
+    </div>
+    <div class="bookshelf-container">
+        <div class="bookshelf">
+            <div class="book" data-genre="mystery" onclick="showDetails('book1')">
+                <img src="covers/1.jpg" alt="Book 1">
+            </div>
+            <div class="book" data-genre="math" onclick="showDetails('book2')">
+                <img src="covers/2.jpg" alt="Book 2">
+            </div>
+            <div class="book" data-genre="classics" onclick="showDetails('book3')">
+                <img src="covers/3.jpg" alt="Book 3">
+            </div>
+            <div class="book" data-genre="math" onclick="showDetails('book4')">
+                <img src="covers/4.jpg" alt="Book 4">
+            </div>
+            <div class="book" data-genre="mystery" onclick="showDetails('book5')">
+                <img src="covers/5.jpg" alt="Book 5">
+            </div>
+            <div class="book" data-genre="science" onclick="showDetails('book6')">
+                <img src="covers/6.jpg" alt="Book 6">
+            </div>
+        </div>
+        <div class="shelf"></div>
+    </div>
+    
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeDetails()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p><strong>Author:</strong><span id="modal-author"></span></p>
+            <p><strong>Pages:</strong><span id="modal-pages"></span></p>
+            <p id="modal-description"></p>
+            <p><strong>Rating:</strong> <span id="modal-rating"></span>/5</p>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
